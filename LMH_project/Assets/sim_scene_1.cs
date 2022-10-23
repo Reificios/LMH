@@ -16,6 +16,11 @@ public class sim_scene_1 : MonoBehaviour
     float xdist = 0f;
     bool startedSimulation = false;
     bool correct = false;
+
+	// wave 
+	public bool isComplete ;
+	public bool isPass;
+	
     // Start is called before the first frame update
     void Start()
     {
