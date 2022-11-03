@@ -10,12 +10,15 @@ public class sim_scene_5 : MonoBehaviour
     [SerializeField] GameObject inputField;
     Rigidbody2D cartRigidBody;
     Rigidbody2D vaseRigidBody;
+    GameObject endingScreen;
+    GameObject levelFailScreen;
     bool startedSimulation = false;
     float inputForce;
     float cartAccel = 0;
     float cartSpeed = 0;
     float vaseSpeed = 0;
     float vaseRotation = 0;
+    bool correct = false;
 
  
     // Start is called before the first frame update
@@ -23,6 +26,10 @@ public class sim_scene_5 : MonoBehaviour
     {
         cartRigidBody = cart.GetComponent<Rigidbody2D>();
         vaseRigidBody = vase.GetComponent<Rigidbody2D>();
+        endingScreen = GameObject.Find("EndScene");
+        levelFailScreen = GameObject.Find("FailScene");
+        endingScreen.SetActive(false);
+        levelFailScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,6 +44,7 @@ public class sim_scene_5 : MonoBehaviour
             } else {
                 cartAccel = (inputForce/140);
                 if (inputForce < 240.45f){
+                    correct = true;
                     cartSpeed += cartAccel * Time.deltaTime;
                     vaseSpeed += cartAccel * Time.deltaTime;
                 } else if (cartAccel < 3.924f){
@@ -64,5 +72,16 @@ public class sim_scene_5 : MonoBehaviour
         // Debug.Log(inputField.GetComponent<InputField>().text);
         inputForce = float.Parse(inputField.GetComponent<InputField>().text);
         startedSimulation = true;
+        inputField.GetComponent<InputField>().interactable = false;
+        StartCoroutine(waiter());
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSecondsRealtime(3);
+        if(!correct){
+            levelFailScreen.SetActive(true);
+        } else {
+            endingScreen.SetActive(true);
+        }
     }
 }

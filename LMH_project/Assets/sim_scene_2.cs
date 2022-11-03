@@ -14,6 +14,8 @@ public class sim_scene_2 : MonoBehaviour
     [SerializeField] TextMeshProUGUI resultText;
     Rigidbody2D mapRigidBody;
     Rigidbody2D invisRigidBody;
+    GameObject levelPassScreen;
+    GameObject levelFailScreen;
     float xdist = 0f;
     bool startedSimulation = false;
     bool correct = false;
@@ -21,6 +23,10 @@ public class sim_scene_2 : MonoBehaviour
     void Start()
     {
         mapRigidBody = map.GetComponent<Rigidbody2D>();
+        levelPassScreen = GameObject.Find("NextScrene");
+        levelFailScreen = GameObject.Find("FailScene");
+        levelPassScreen.SetActive(false);
+        levelFailScreen.SetActive(false);
         // invisRigidBody = invisforceMan.GetComponent<Rigidbody2D>();
     }
 
@@ -56,15 +62,11 @@ public class sim_scene_2 : MonoBehaviour
     }
 
     IEnumerator waiter(){
-        yield return new WaitForSecondsRealtime(4);
-        if(correct){
-                resultText.text = "Correct!";
-            } else {
-                resultText.text = "Failed";
-            }
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(3);
         if(!correct){
-            SceneManager.LoadScene("level_2"); 
+            levelFailScreen.SetActive(true);
+        } else {
+            levelPassScreen.SetActive(true);
         }
     }
 }

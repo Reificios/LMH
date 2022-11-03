@@ -12,6 +12,8 @@ public class sim_scene_1 : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayDistance;
     [SerializeField] TextMeshProUGUI resultText;
     Rigidbody2D footValveRigidBody;
+    GameObject levelPassScreen;
+    GameObject levelFailScreen;
     float dist = 0f;
     float xdist = 0f;
     bool startedSimulation = false;
@@ -25,6 +27,10 @@ public class sim_scene_1 : MonoBehaviour
     void Start()
     {
         footValveRigidBody = footValve.GetComponent<Rigidbody2D>();
+        levelPassScreen = GameObject.Find("NextScrene");
+        levelFailScreen = GameObject.Find("FailScene");
+        levelPassScreen.SetActive(false);
+        levelFailScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,15 +63,11 @@ public class sim_scene_1 : MonoBehaviour
     }
 
     IEnumerator waiter(){
-        yield return new WaitForSecondsRealtime(4);
-        if(correct){
-                resultText.text = "Correct!";
-            } else {
-                resultText.text = "Failed";
-            }
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(3);
         if(!correct){
-            SceneManager.LoadScene("level_1"); 
+            levelFailScreen.SetActive(true);
+        } else {
+            levelPassScreen.SetActive(true);
         }
     }
 }
