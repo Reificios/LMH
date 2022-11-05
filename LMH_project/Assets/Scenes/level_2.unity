@@ -624,6 +624,10 @@ PrefabInstance:
       value: 111.834854
       objectReference: {fileID: 0}
     - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_margin.z
+      value: -1651.5061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_fontSizeBase
       value: 45
       objectReference: {fileID: 0}
