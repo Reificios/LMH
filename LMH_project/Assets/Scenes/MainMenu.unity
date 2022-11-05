@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 699893625}
   - component: {fileID: 699893624}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -765,8 +765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 447.5, y: -160.4}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 485.74, y: -184.74}
+  m_SizeDelta: {x: 71.9359, y: 63.6817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699893624
 MonoBehaviour:
@@ -1776,8 +1776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 504.9, y: -240.3}
-  m_SizeDelta: {x: 248.1891, y: 42.9134}
+  m_AnchoredPosition: {x: 457.4, y: -238.04}
+  m_SizeDelta: {x: 128.6235, y: 42.9134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042621158
 MonoBehaviour:
@@ -1808,8 +1808,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1826,8 +1826,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.95
-  m_fontSizeBase: 21.95
+  m_fontSize: 18.66
+  m_fontSizeBase: 18.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1862,7 +1862,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 1.960083, w: 19.600922}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
