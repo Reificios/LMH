@@ -38,11 +38,10 @@ public class sim_scene_2 : MonoBehaviour
 
         displayDistance.text = "Distance from pivot point to forceman in X-Axis is " + xdist.ToString();
         // displayDistance.text = "Distance from forceman X to pivot point is" + xdist.ToString(); 
+    }
 
-        if(Input.GetKeyDown("space") && !startedSimulation)
-        // if(!startedSimulation)
-        {
-            invisBarrier.SetActive(false);
+    public void startSim(){
+        invisBarrier.SetActive(false);
             if(!startedSimulation){
                 if (xdist > 6.107f && xdist < 6.75f){
                     correct = true;
@@ -59,8 +58,6 @@ public class sim_scene_2 : MonoBehaviour
 
             // wait 3 sec to show result screen
             StartCoroutine(waiter());
-            
-        }
     }
 
     IEnumerator waiter(){
