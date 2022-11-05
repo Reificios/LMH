@@ -68,7 +68,8 @@ public class sim_scene_3 : MonoBehaviour
         invisBarrier.SetActive(false);
         inputFieldReal.interactable = false;
             if (inputForce != 400) {
-                correct = false;
+                levelFailScreen.SetActive(true);
+                return;
             } else {
                 if (xdist < 4.725 & xdist > 4.275) {
                         correct = true;
