@@ -40,7 +40,7 @@ public class sim_scene_1 : MonoBehaviour
         xdist = (forceMan.transform.position.x - pivotPoint.transform.position.x - Mathf.Cos(70 * Mathf.PI / 180));
         dist = xdist / (Mathf.Cos(20 * Mathf.PI / 180));
 
-        displayDistance.text = "Distance from forceman X is " + xdist.ToString();
+        displayDistance.text = "Distance from pivot point to forceman in X-Axis is " + xdist.ToString();
         // displayDistance.text = "Distance from forceman X to pivot point is" + xdist.ToString(); 
 
         if(Input.GetKeyDown("space") && !startedSimulation)
@@ -49,6 +49,11 @@ public class sim_scene_1 : MonoBehaviour
             if(!startedSimulation){
                 if (dist > 1.827f && dist < 2.020f){
                     correct = true;
+                }
+                if (dist > 2.020f){
+                    forceMan.GetComponent<Rigidbody2D>().mass = 40;
+                } else {
+                    forceMan.GetComponent<Rigidbody2D>().mass = 20;
                 }
             }
             startedSimulation = true;

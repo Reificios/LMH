@@ -44,7 +44,7 @@ public class sim_scene_3 : MonoBehaviour
     void Update()
     {
         xdist = Mathf.Abs(forceMan.transform.position.x - pivotPoint.transform.position.x);
-        displayDistance.text = "Distance from forceman X is " + xdist.ToString();
+        displayDistance.text = "Distance from hinge to forceman in X-Axis is " + xdist.ToString();
 
         if(startedSimulation){
             if(!correct && !maxPos){
