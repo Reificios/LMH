@@ -12,6 +12,7 @@ public class sim_scene_1 : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayDistance;
     [SerializeField] TextMeshProUGUI resultText;
     [SerializeField] GameObject invisBarrier;
+    [SerializeField] GameObject arrow;
     Rigidbody2D footValveRigidBody;
     GameObject levelPassScreen;
     GameObject levelFailScreen;
@@ -45,6 +46,7 @@ public class sim_scene_1 : MonoBehaviour
 
         if(Input.GetKeyDown("space") && !startedSimulation)
         {   
+            arrow.SetActive(false);
             invisBarrier.SetActive(false);
             if(!startedSimulation){
                 if (dist > 1.827f && dist < 2.020f){
@@ -53,7 +55,7 @@ public class sim_scene_1 : MonoBehaviour
                 if (dist > 2.020f){
                     forceMan.GetComponent<Rigidbody2D>().mass = 40;
                 } else {
-                    forceMan.GetComponent<Rigidbody2D>().mass = 20;
+                    forceMan.GetComponent<Rigidbody2D>().mass = 15;
                 }
             }
             startedSimulation = true;
