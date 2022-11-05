@@ -12,6 +12,7 @@ public class sim_scene_2 : MonoBehaviour
     [SerializeField] GameObject pivotPoint;
     [SerializeField] TextMeshProUGUI displayDistance;
     [SerializeField] TextMeshProUGUI resultText;
+    [SerializeField] GameObject invisBarrier;
     Rigidbody2D mapRigidBody;
     Rigidbody2D invisRigidBody;
     GameObject levelPassScreen;
@@ -41,6 +42,7 @@ public class sim_scene_2 : MonoBehaviour
         if(Input.GetKeyDown("space") && !startedSimulation)
         // if(!startedSimulation)
         {
+            invisBarrier.SetActive(false);
             if(!startedSimulation){
                 if (xdist > 6.107f && xdist < 6.75f){
                     correct = true;

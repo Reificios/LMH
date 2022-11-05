@@ -11,6 +11,7 @@ public class sim_scene_1 : MonoBehaviour
     [SerializeField] GameObject pivotPoint;
     [SerializeField] TextMeshProUGUI displayDistance;
     [SerializeField] TextMeshProUGUI resultText;
+    [SerializeField] GameObject invisBarrier;
     Rigidbody2D footValveRigidBody;
     GameObject levelPassScreen;
     GameObject levelFailScreen;
@@ -39,11 +40,12 @@ public class sim_scene_1 : MonoBehaviour
         xdist = (forceMan.transform.position.x - pivotPoint.transform.position.x - Mathf.Cos(70 * Mathf.PI / 180));
         dist = xdist / (Mathf.Cos(20 * Mathf.PI / 180));
 
-        displayDistance.text = "Distance from forceman X is " + xdist.ToString() + " aka real dist = " + dist.ToString() + " correction " + correct;
+        displayDistance.text = "Distance from forceman X is " + xdist.ToString();
         // displayDistance.text = "Distance from forceman X to pivot point is" + xdist.ToString(); 
 
         if(Input.GetKeyDown("space") && !startedSimulation)
-        {
+        {   
+            invisBarrier.SetActive(false);
             if(!startedSimulation){
                 if (dist > 1.827f && dist < 2.020f){
                     correct = true;

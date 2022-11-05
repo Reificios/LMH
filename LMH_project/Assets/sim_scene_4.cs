@@ -16,6 +16,7 @@ public class sim_scene_4 : MonoBehaviour
     float boxSpeed = 0;
     float boxRotation = 0;
     bool correct = false;
+    bool isNum = false;
 
  
     // Start is called before the first frame update
@@ -53,8 +54,10 @@ public class sim_scene_4 : MonoBehaviour
     }
 
     public void startSim(){
-        Debug.Log(inputField.GetComponent<InputField>().text);
-        inputForce = float.Parse(inputField.GetComponent<InputField>().text);
+        isNum = float.TryParse(inputField.GetComponent<InputField>().text, out inputForce);
+        if(!isNum){
+            return;
+        }
         startedSimulation = true;
         inputField.GetComponent<InputField>().interactable = false;
         StartCoroutine(waiter());

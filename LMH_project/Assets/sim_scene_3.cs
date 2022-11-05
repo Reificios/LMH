@@ -13,6 +13,7 @@ public class sim_scene_3 : MonoBehaviour
     [SerializeField] GameObject pivotPoint;
     [SerializeField] TextMeshProUGUI displayDistance;
     [SerializeField] GameObject inputField;
+    [SerializeField] GameObject invisBarrier;
     Rigidbody2D mapRigidBody;
     Rigidbody2D counterWeighRigidBody;
     GameObject beam;
@@ -26,6 +27,7 @@ public class sim_scene_3 : MonoBehaviour
     float xdistFinal;
     float inputForce;
     float wrongMagnitude = 0;
+    bool isNum;
 
     void Start()
     {
@@ -44,22 +46,6 @@ public class sim_scene_3 : MonoBehaviour
         xdist = Mathf.Abs(forceMan.transform.position.x - pivotPoint.transform.position.x);
         displayDistance.text = "Distance from forceman X is " + xdist.ToString();
 
-        if(Input.GetKeyDown("space") && !startedSimulation){
-            inputFieldReal.interactable = false;
-            inputForce = float.Parse(inputFieldReal.text);
-            if (inputForce != 400) {
-                    // fail
-            } else {
-                if (xdist < 4.725 & xdist > 4.275) {
-                        correct = true;
-                }
-            }
-            forceMan.GetComponent<forcemanMovement>().enabled = false;
-            startedSimulation = true;
-            xdistFinal = xdist;
-            // wait 3 sec to show result screen
-            StartCoroutine(waiter());
-        }
         if(startedSimulation){
             if(!correct && !maxPos){
                 wrongMagnitude = (xdistFinal - 4.5f) * Time.deltaTime;
@@ -72,6 +58,29 @@ public class sim_scene_3 : MonoBehaviour
         }
 
     }
+
+    public void startSim(){
+        // Debug.Log(inputField.GetComponent<InputField>().text);
+        isNum = float.TryParse(inputField.GetComponent<InputField>().text, out inputForce);
+        if(!isNum){
+            return;
+        }
+        invisBarrier.SetActive(false);
+        inputFieldReal.interactable = false;
+            if (inputForce != 400) {
+                correct = false;
+            } else {
+                if (xdist < 4.725 & xdist > 4.275) {
+                        correct = true;
+                }
+            }
+            forceMan.GetComponent<forcemanMovement>().enabled = false;
+            startedSimulation = true;
+            xdistFinal = xdist;
+            // wait 3 sec to show result screen
+            StartCoroutine(waiter());
+    }
+
 
     IEnumerator waiter(){
         yield return new WaitForSecondsRealtime(3);
