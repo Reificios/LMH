@@ -1448,6 +1448,7 @@ GameObject:
   - component: {fileID: 1970074812}
   - component: {fileID: 1970074811}
   - component: {fileID: 1970074810}
+  - component: {fileID: 1970074813}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1521,6 +1522,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1970074813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970074809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d13481c6e48ed4f9e1b7eb9242ea65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005239377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1924,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3671887875884333239, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -935
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333239, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 509
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_text
       value: "A 7.5-meter foot valve for a pneumatic system is hinged. Knowing that
@@ -1919,12 +1940,24 @@ PrefabInstance:
         man on the other size of the hinged to balance to foot valve."
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_margin.w
+      value: -176.51636
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.x
       value: 103.57538
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.z
-      value: -776.52167
+      value: -1759.0455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560675, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_Name
@@ -1964,6 +1997,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560676, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560676, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560676, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560676, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560676, guid: a37418f241e33504582709f5d9572d3d, type: 3}
@@ -2014,10 +2059,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560679, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1970074811}
+    - target: {fileID: 3671887875914560679, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560679, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.x
       value: 88.725945
@@ -2026,9 +2099,17 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -779.6046
       objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096629, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -923
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887876567096629, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 154
+      value: 342
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37418f241e33504582709f5d9572d3d, type: 3}

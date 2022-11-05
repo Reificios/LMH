@@ -477,6 +477,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3671887875884333239, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -923
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333239, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 504
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_text
       value: "The bracketis hinged and attached to a control cable  at 0.18m from
@@ -484,12 +492,24 @@ PrefabInstance:
         force of 280N in X-axis on the hinge to make an Equilibrium System.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_margin.w
+      value: -164.26537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.x
       value: 109.07349
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.z
-      value: -766.94946
+      value: -1756.8237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560675, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_Name
@@ -579,17 +599,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887875914560678, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887875914560679, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 721990184}
     - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_margin.x
       value: 111.834854
       objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096626, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671887876567096629, guid: a37418f241e33504582709f5d9572d3d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -918
+      objectReference: {fileID: 0}
     - target: {fileID: 3671887876567096629, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150.3
+      value: 327
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37418f241e33504582709f5d9572d3d, type: 3}
