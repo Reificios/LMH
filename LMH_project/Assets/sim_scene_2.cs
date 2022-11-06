@@ -34,7 +34,7 @@ public class sim_scene_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xdist = forceMan.transform.position.x - pivotPoint.transform.position.x;
+        xdist = (forceMan.transform.position.x - pivotPoint.transform.position.x)/10;
 
         displayDistance.text = "Distance from pivot point to forceman in X-Axis is " + xdist.ToString();
         // displayDistance.text = "Distance from forceman X to pivot point is" + xdist.ToString(); 
@@ -43,7 +43,7 @@ public class sim_scene_2 : MonoBehaviour
     public void startSim(){
         invisBarrier.SetActive(false);
             if(!startedSimulation){
-                if (xdist > 6.107f && xdist < 6.75f){
+                if (xdist > 0.4877f && xdist < 0.5391f){
                     correct = true;
                 }
             }

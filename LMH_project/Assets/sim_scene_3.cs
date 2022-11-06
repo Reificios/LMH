@@ -67,7 +67,7 @@ public class sim_scene_3 : MonoBehaviour
         }
         invisBarrier.SetActive(false);
         inputFieldReal.interactable = false;
-            if (inputForce != 400) {
+            if (inputForce != 500) {
                 levelFailScreen.SetActive(true);
                 return;
             } else {
