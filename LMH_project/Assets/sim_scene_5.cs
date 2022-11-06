@@ -21,7 +21,7 @@ public class sim_scene_5 : MonoBehaviour
     bool correct = false;
     bool isNum;
 
- 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,30 +36,41 @@ public class sim_scene_5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startedSimulation){
-            if(inputForce < 217.55f){
-                cartAccel = (inputForce/140);
+        if (startedSimulation)
+        {
+            if (inputForce < 217.55f)
+            {
+                cartAccel = (inputForce / 140);
                 cartSpeed += cartAccel * Time.deltaTime;
                 vaseSpeed += cartAccel * Time.deltaTime;
                 // show that failed too low
-            } else {
-                cartAccel = (inputForce/140);
-                if (inputForce < 240.45f){
+            }
+            else
+            {
+                cartAccel = (inputForce / 140);
+                if (inputForce < 240.45f)
+                {
                     correct = true;
                     cartSpeed += cartAccel * Time.deltaTime;
                     vaseSpeed += cartAccel * Time.deltaTime;
-                } else if (cartAccel < 3.924f){
+                }
+                else if (cartAccel < 3.924f)
+                {
                     vaseRotation += (39.24f - 24 * cartAccel) * Time.deltaTime;
                     vaseRigidBody.rotation = vaseRotation;
                     cartSpeed += cartAccel * Time.deltaTime;
-                    if(vaseRotation < 20){
-                    vaseSpeed += cartAccel * Time.deltaTime;
+                    if (vaseRotation < 20)
+                    {
+                        vaseSpeed += cartAccel * Time.deltaTime;
                     }
-                } else {
+                }
+                else
+                {
                     vaseRotation += (39.24f - 24 * cartAccel) * Time.deltaTime;
                     vaseRigidBody.rotation = vaseRotation;
                     cartSpeed += cartAccel * Time.deltaTime;
-                    if(vaseRotation < 20){
+                    if (vaseRotation < 20)
+                    {
                         vaseSpeed += 3.924f * Time.deltaTime;
                     }
                 }
@@ -69,22 +80,30 @@ public class sim_scene_5 : MonoBehaviour
         }
     }
 
-    public void startSim(){
+    public void startSim()
+    {
         // Debug.Log(inputField.GetComponent<InputField>().text);
         isNum = float.TryParse(inputField.GetComponent<InputField>().text, out inputForce);
-        if(!isNum){
+        if (!isNum)
+        {
             return;
         }
+        cartRigidBody.bodyType = RigidbodyType2D.Dynamic;
+        vaseRigidBody.bodyType = RigidbodyType2D.Dynamic;
         startedSimulation = true;
         inputField.GetComponent<InputField>().interactable = false;
         StartCoroutine(waiter());
     }
 
-    IEnumerator waiter(){
+    IEnumerator waiter()
+    {
         yield return new WaitForSecondsRealtime(3);
-        if(!correct){
+        if (!correct)
+        {
             levelFailScreen.SetActive(true);
-        } else {
+        }
+        else
+        {
             endingScreen.SetActive(true);
         }
     }

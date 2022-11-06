@@ -547,6 +547,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextScrene
       objectReference: {fileID: 0}
+    - target: {fileID: 757150689106665504, guid: 8c9c90a01b3e28843948bc64b44cde1e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 757150689106665504, guid: 8c9c90a01b3e28843948bc64b44cde1e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9c90a01b3e28843948bc64b44cde1e, type: 3}
 --- !u!1001 &1925934699629624704
@@ -559,6 +567,10 @@ PrefabInstance:
     - target: {fileID: 1925934700650677331, guid: 09f6adfad920bae499f1bf9e009d4724, type: 3}
       propertyPath: m_Name
       value: EndScrene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925934700650677331, guid: 09f6adfad920bae499f1bf9e009d4724, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1925934700650677335, guid: 09f6adfad920bae499f1bf9e009d4724, type: 3}
       propertyPath: m_Pivot.x
@@ -740,6 +752,10 @@ PrefabInstance:
     - target: {fileID: 3884931521699222794, guid: 4147f07e529ff0b47b85b340c570b959, type: 3}
       propertyPath: m_Name
       value: FailScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884931521699222794, guid: 4147f07e529ff0b47b85b340c570b959, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4147f07e529ff0b47b85b340c570b959, type: 3}
