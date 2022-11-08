@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_text
       value: "The bracketis hinged and attached to a control cable  at 0.18m from
-        the hinge.The tension in the cable AB is 1000N. Determine the Force Man with
+        the hinge.The tension in the cable AB is 1000N. Determine the Forceman with
         force of 280N in X-axis on the hinge to make an Equilibrium System.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
@@ -746,11 +746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3671887877241024074, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -344
+      value: -326.9
       objectReference: {fileID: 0}
     - target: {fileID: 3671887877241024074, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -305
+      value: -304.4
       objectReference: {fileID: 0}
     - target: {fileID: 3671887877241024075, guid: a37418f241e33504582709f5d9572d3d, type: 3}
       propertyPath: m_text
@@ -1665,7 +1665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -251, y: -229}
+  m_AnchoredPosition: {x: -344, y: -202}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742013974

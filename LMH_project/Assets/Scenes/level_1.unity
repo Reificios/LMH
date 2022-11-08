@@ -2231,7 +2231,7 @@ PrefabInstance:
       value: "A 7.5-meter foot valve for a pneumatic system is hinged at 5.1 m from
         the left-most side. Knowing that the 16-N force at left hand side is angled
         at 45\xB0 from the valve and the valve is angled 20\xB0 away from the ground.
-        Determine the positon of 30-N force man on the other size of the hinged to
+        Determine the positon of 30-N Forceman on the other size of the hinged to
         balance to foot valve."
       objectReference: {fileID: 0}
     - target: {fileID: 3671887875884333241, guid: a37418f241e33504582709f5d9572d3d, type: 3}
