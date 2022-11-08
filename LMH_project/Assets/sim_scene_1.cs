@@ -40,7 +40,7 @@ public class sim_scene_1 : MonoBehaviour
     {
         xdist = (forceMan.transform.position.x - pivotPoint.transform.position.x - Mathf.Cos(70 * Mathf.PI / 180));
 
-        displayDistance.text = "Distance from pivot point to forceman in X-Axis is " + xdist.ToString();
+        displayDistance.text = "Distance from pivot point to forceman in X-Axis is " + xdist.ToString() + " m.";
         // displayDistance.text = "Distance from forceman X to pivot point is" + xdist.ToString(); 
     }
 
